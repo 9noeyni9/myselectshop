@@ -4,6 +4,8 @@ import com.sparta.myselectshop.entity.Product;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Getter
 @NoArgsConstructor
 public class ProductResponseDto {
@@ -13,6 +15,7 @@ public class ProductResponseDto {
     private String image;
     private int lprice;
     private int myprice;
+    private List<Product> productList;
 
     public ProductResponseDto(Product product) {
         this.id = product.getId();
