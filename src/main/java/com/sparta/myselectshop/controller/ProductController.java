@@ -40,4 +40,14 @@ public class ProductController {
         return productService.getProductList(userDetails.getUser(), page-1, size, sortBy, isAsc);
         // page-1  : client에선 1부터 시작하고 Pagable PageRequest에선 0부터 시작하기 때문에 client에서 넘어온 값에 -1해줘야 둘이 일치함
     }
+
+    @PostMapping("/products/{productId}/folder")
+    public void addFolder(
+            @PathVariable Long productId,
+            @RequestParam Long folderId,
+            @AuthenticationPrincipal UserDetailsImpl userDetails){
+
+        productService.addFolder(productId, folderId, userDetails.getUser());
+
+    }
 }
