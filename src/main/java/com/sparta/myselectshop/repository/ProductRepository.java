@@ -1,6 +1,5 @@
 package com.sparta.myselectshop.repository;
 
-import com.sparta.myselectshop.dto.ProductResponseDto;
 import com.sparta.myselectshop.entity.Product;
 import com.sparta.myselectshop.entity.User;
 import org.springframework.data.domain.Page;

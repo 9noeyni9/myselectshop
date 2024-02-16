@@ -29,5 +29,6 @@ public class ProductResponseDto {
         this.myprice = product.getMyprice();
         for (ProductFolder productFolder : product.getProductFolderList()) {
             productFolderList.add(new FolderResponseDto(productFolder.getFolder()));
-        }    }
+        }
+    }
 }
